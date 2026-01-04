@@ -27,29 +27,10 @@ Building tools for healthcare requires care. This sandbox allows experimentation
 - **Icons**: [Lucide React](https://lucide.dev/)
 - **Deployment**: Pure Frontend (No backend dependencies)
 
-## Getting Started
 
-1.  **Clone the repository**
-    ```bash
-    git clone https://github.com/medvendorhub/clinic-workflow-sandbox.git
-    cd clinic-workflow-sandbox
-    ```
-
-2.  **Install dependencies**
-    ```bash
-    npm install
-    ```
-
-3.  **Start the development server**
-    ```bash
-    npm run dev
-    ```
 
 ## Intended Use
 - Demonstrating Chrome extensions
 - Testing clinician productivity ideas
 - Learning in public about healthcare UX
 
-## Next Steps
-- Integrate productivity extensions
-- Explore assistive (non-diagnostic) AI patterns
