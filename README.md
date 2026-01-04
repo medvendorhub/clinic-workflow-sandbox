@@ -20,6 +20,14 @@ Building tools for healthcare requires care. This sandbox allows experimentation
     - Task checklist with real-time progress tracking.
     - Patient summary sidebar with "Synthetic Constraints" reminders.
 
+## Tech Stack
+- **Framework**: [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/) (via [Vite](https://vitejs.dev/))
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **UI Library**: [Shadcn UI](https://ui.shadcn.com/) (Radix Primitives)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Deployment**: Pure Frontend (No backend dependencies)
+
+
 
 ## Intended Use
 - Demonstrating Chrome extensions
