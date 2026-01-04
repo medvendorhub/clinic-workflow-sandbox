@@ -1,73 +1,55 @@
-# React + TypeScript + Vite
+# Clinic Workflow Sandbox (Demo)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a synthetic clinic workflow sandbox built to safely prototype and demonstrate clinician productivity tools. It simulates a modern Electronic Health Record (EHR) interface with a focus on clean design and productivity workflows.
 
-Currently, two official plugins are available:
+> **⚠️ Usage Warning: This is a demo environment only.**
+> *   All patient data is synthetic and locally generated.
+> *   No real data is stored, processed, or transmitted.
+> *   This tool is **not** intended for clinical or diagnostic use.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Why this exists
+Building tools for healthcare requires care. This sandbox allows experimentation with workflow, UX, and assistive tooling without exposing real patient data or interacting with complex, secured clinical systems.
 
-## React Compiler
+## Features
+- **Synthetic Patient Dashboard**:
+    - Real-time "Stats Cards" for clinic metrics (Patients Waiting, Avg Time, etc.).
+    - Patient queue list with avatars and visit type indicators.
+- **Consultation Workspace**:
+    - Integrated consultation timer with visual recording indicator.
+    - Free-text clinical notes area (`text-lg` for readability).
+    - Task checklist with real-time progress tracking.
+    - Patient summary sidebar with "Synthetic Constraints" reminders.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
+- **Framework**: [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/) (via [Vite](https://vitejs.dev/))
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **UI Library**: [Shadcn UI](https://ui.shadcn.com/) (Radix Primitives)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Deployment**: Pure Frontend (No backend dependencies)
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/medvendorhub/clinic-workflow-sandbox.git
+    cd clinic-workflow-sandbox
+    ```
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+2.  **Install dependencies**
+    ```bash
+    npm install
+    ```
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+3.  **Start the development server**
+    ```bash
+    npm run dev
+    ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Intended Use
+- Demonstrating Chrome extensions
+- Testing clinician productivity ideas
+- Learning in public about healthcare UX
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Next Steps
+- Integrate productivity extensions
+- Explore assistive (non-diagnostic) AI patterns
